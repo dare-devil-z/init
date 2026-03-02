@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AuroraCalc • Beautiful Web Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-orb orb-3"></div>
+
+    <main class="app-shell" aria-label="Calculator app">
+      <section class="calculator" role="application" aria-label="Simple calculator">
+        <header class="top-bar">
+          <h1>AuroraCalc</h1>
+          <button id="theme-toggle" class="ghost-btn" aria-label="Toggle light and dark theme">
+            <span class="sun">☀️</span><span class="moon">🌙</span>
+          </button>
+        </header>
+
+        <div class="display-wrap">
+          <p id="expression" class="expression" aria-live="polite"></p>
+          <output id="result" class="result" aria-live="assertive">0</output>
+        </div>
+
+        <div class="controls">
+          <button data-action="clear" class="action">AC</button>
+          <button data-action="delete" class="action">⌫</button>
+          <button data-value="%" class="operator">%</button>
+          <button data-value="/" class="operator">÷</button>
+
+          <button data-value="7">7</button>
+          <button data-value="8">8</button>
+          <button data-value="9">9</button>
+          <button data-value="*" class="operator">×</button>
+
+          <button data-value="4">4</button>
+          <button data-value="5">5</button>
+          <button data-value="6">6</button>
+          <button data-value="-" class="operator">−</button>
+
+          <button data-value="1">1</button>
+          <button data-value="2">2</button>
+          <button data-value="3">3</button>
+          <button data-value="+" class="operator">+</button>
+
+          <button data-value="0" class="span-2">0</button>
+          <button data-value=".">.</button>
+          <button data-action="equals" class="equals">=</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
